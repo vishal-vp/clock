@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Digit from '../Digit';
+import moment from 'moment';
 import './Clock.scss';
 
 
 function getTimeObject() {
-  const date = new Date();
-  const hours = ("0" + date.getHours()).slice(-2);
-  const minutes = ("0" + date.getMinutes()).slice(-2);
-  const seconds = ("0" + date.getSeconds()).slice(-2);
+  const date = moment(new Date());
+  const hours = date.format('HH');
+  const minutes = date.format('mm');
+  const seconds = date.format('ss');
   const time = { hours, minutes, seconds };
   return time;
 }
