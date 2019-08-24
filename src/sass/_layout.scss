@@ -1,0 +1,14 @@
+html, body, #root, .App, .tool {
+  /* Display & Box Model */
+  height: 100%;
+}
+
+body {
+  /* Color */
+  background: $bod-gray;
+}
+
+.tool {
+  /* Display & Box Model */
+  display: flex;
+}

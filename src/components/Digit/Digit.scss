@@ -1,0 +1,16 @@
+@import '../../sass/variables.scss';
+
+.digit {
+  /* Display & Box Model */
+  border: 0;
+  height: 5rem;
+  width: 4rem;
+
+  /* Color */
+  background: $black;
+  color: $white;
+
+  /* Text */
+  font-size: 4rem;
+  text-align: center;
+}
