@@ -1,3 +1,7 @@
+@import '../../sass/variables.scss';
+
+$time-unit-padding: 0.3rem;
+
 .clock {
   /* Display & Box Model */
   margin: auto;
@@ -5,9 +9,12 @@
   .time-unit {
     /* Display & Box Model */
     display: inline-block;
-    padding: 0.3rem;
+    padding: $time-unit-padding;
 
     .digit {
+      /* Display & Box Model */
+      width: 1ch;
+
       /* Text */
       font-size: 4rem;
       @media screen and (max-width: 390px) {
@@ -18,6 +25,28 @@
     .digit:nth-child(even) {
       /* Display & Box Model */
       padding-left: 0 !important;
+    }
+  }
+
+  .clock-settings {
+    /* Display & Box Model */
+    padding: $time-unit-padding;
+
+    .select-button {
+      /* Display & Box Model */
+      width: 20%;
+
+      button {
+        /* Display & Box Model */
+        padding: 0.6rem;
+        /* Text */
+        font-size: 0.9rem;
+
+        &.selected {
+          /* Text */
+          font-weight: 700;
+        }
+      }
     }
   }
 }

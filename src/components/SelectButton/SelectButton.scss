@@ -1,0 +1,21 @@
+@import '../../sass/variables.scss';
+
+.select-button {
+  /* Display & Box Model */
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    /* Display & Box Model */
+    width: 100%;
+
+    /* Color */
+    background: $black;
+    color: $white;
+
+    &.selected {
+      /* Color */
+      background: $mine-shaft;
+    }
+  }
+}
