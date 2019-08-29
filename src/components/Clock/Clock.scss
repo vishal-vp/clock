@@ -14,11 +14,13 @@ $time-unit-padding: 0.3rem;
     .digit {
       /* Display & Box Model */
       width: 1ch;
-
       /* Text */
       font-size: 4rem;
-      @media screen and (max-width: 390px) {
+      @media screen and (max-width: $sm) {
         font-size: 2.5rem;
+      }
+      @media screen and (max-width: $xs) {
+        font-size: 1.5rem;
       }
     }
 
@@ -56,6 +58,10 @@ $time-unit-padding: 0.3rem;
       button {
         /* Display & Box Model */
         padding: 0.6rem;
+        @media screen and (max-width: $sm) {
+          padding: 0.2rem;
+        }
+
         /* Text */
         font-size: 0.9rem;
 
