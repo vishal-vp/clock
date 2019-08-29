@@ -9,7 +9,7 @@ $time-unit-padding: 0.3rem;
   .time-unit {
     /* Display & Box Model */
     display: inline-block;
-    padding: $time-unit-padding;
+    padding: 0 $time-unit-padding;
 
     .digit {
       /* Display & Box Model */
@@ -25,6 +25,23 @@ $time-unit-padding: 0.3rem;
     .digit:nth-child(even) {
       /* Display & Box Model */
       padding-left: 0 !important;
+    }
+  }
+
+  .daylight {
+    /* Display & Box Model */
+    display: inline-block;
+    margin-left: 0.3rem;
+    padding: 0.4rem;
+    vertical-align: bottom;
+    /* Color */
+    background: $black;
+
+    img {
+      /* Display & Box Model */
+      height: 1.5rem;
+      width: auto;
+      vertical-align: bottom;
     }
   }
 

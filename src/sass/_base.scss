@@ -7,8 +7,9 @@
 /* Other */
 
 button {
-  display: inline-block;
+  /* Display & Box Model */
   border: none;
-  padding: 0;
+  display: inline-block;
   margin: 0;
+  padding: 0;
 }
