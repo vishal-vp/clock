@@ -35,15 +35,24 @@ $time-unit-padding: 0.3;
     display: inline-block;
     margin-left: $time-unit-padding * 1rem;
     padding: 0.6rem;
+    @media screen and (max-width: $sm) {
+      padding: 0.3rem;
+    }
     vertical-align: bottom;
     /* Color */
     background: $black;
 
     span {
       /* Display & Box Model */
-      vertical-align: bottom;
+      vertical-align: middle;
       /* Text */
       font-size: 1.2rem;
+      @media screen and (max-width: $sm) {
+        font-size: 0.8rem;
+      }
+      @media screen and (max-width: $xs) {
+        font-size: 0.6rem;
+      }
       font-weight: 600;
     }
   }
