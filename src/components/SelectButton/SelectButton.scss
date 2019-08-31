@@ -8,6 +8,11 @@
   button {
     /* Display & Box Model */
     width: 100%;
+    outline: none;
+    &::-moz-focus-inner {
+      /* Display & Box Model */
+      border: 0;
+    }
 
     /* Color */
     background: $black;

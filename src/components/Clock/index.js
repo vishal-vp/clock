@@ -26,9 +26,12 @@ function ClockSettings(props) {
   return (
     <div className='clock-settings'>
       <SelectButton
-        choices={Object.values(TIME_FORMATS)}
         onSelect={props.handleTimeFormatChange}
-        selected={props.settings.format} />
+        selected={props.settings.format}>
+        {Object.values(TIME_FORMATS).map(choice => (
+          <span key={choice} value={choice}>{choice}</span>
+        ))}
+      </SelectButton>
     </div>
   );
 }
