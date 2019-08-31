@@ -1,6 +1,6 @@
 @import '../../sass/variables.scss';
 
-$time-unit-padding: 0.3rem;
+$time-unit-padding: 0.3;
 
 .clock {
   /* Display & Box Model */
@@ -9,7 +9,7 @@ $time-unit-padding: 0.3rem;
   .time-unit {
     /* Display & Box Model */
     display: inline-block;
-    padding: 0 $time-unit-padding;
+    padding: 0 $time-unit-padding * 1rem;
 
     .digit {
       /* Display & Box Model */
@@ -30,26 +30,28 @@ $time-unit-padding: 0.3rem;
     }
   }
 
-  .daylight {
+  .meridiem {
     /* Display & Box Model */
     display: inline-block;
-    margin-left: 0.3rem;
-    padding: 0.4rem;
+    margin-left: $time-unit-padding * 1rem;
+    padding: 0.6rem;
     vertical-align: bottom;
     /* Color */
     background: $black;
 
-    img {
+    span {
       /* Display & Box Model */
-      height: 1.5rem;
-      width: auto;
       vertical-align: bottom;
+      /* Text */
+      font-size: 1.2rem;
+      font-weight: 600;
     }
   }
 
   .clock-settings {
     /* Display & Box Model */
-    padding: $time-unit-padding;
+    padding-bottom: 0.5rem;
+    padding-left: $time-unit-padding * 1rem;
 
     .select-button {
       /* Display & Box Model */

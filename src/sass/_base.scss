@@ -1,4 +1,5 @@
 @import 'reset-css';
+@import 'variables';
 
 /* Positioning */
 /* Display & Box Model */
@@ -12,4 +13,9 @@ button {
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+
+body * {
+  /* Color */
+  color: $white;
 }

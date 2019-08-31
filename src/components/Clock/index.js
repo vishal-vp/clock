@@ -3,8 +3,6 @@ import Digit from '../Digit';
 import SelectButton from '../SelectButton';
 import moment from 'moment';
 import useClockSettings from './useClockSettings';
-import dayIcon from '../../assets/day.svg';
-import nightIcon from '../../assets/night.svg';
 import './Clock.scss';
 
 
@@ -19,8 +17,8 @@ function getTimeObject(format) {
   const hours = date.format(hourFormat);
   const minutes = date.format('mm');
   const seconds = date.format('ss');
-  const isDay = date.format('A') === 'AM';
-  const time = { hours, minutes, seconds, isDay };
+  const meridiem = date.format('A');
+  const time = { hours, minutes, seconds, meridiem };
   return time;
 }
 
@@ -64,9 +62,9 @@ function Clock(props) {
         <TimeUnit disabled={true} value={time.hours} />
         <TimeUnit disabled={true} value={time.minutes} />
         <TimeUnit disabled={true} value={time.seconds} />
-        <div className='daylight'>
-          <img src={time.isDay ? dayIcon : nightIcon } alt='' />
-        </div>
+        {clockSettings.settings.format === TIME_FORMATS.TWELVE &&
+          <div className='meridiem'><span>{time.meridiem}</span></div>
+        }
       </div>
     </div>
   );
