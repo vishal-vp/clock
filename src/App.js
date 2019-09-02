@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Clock from './components/Clock';
+import Stopwatch from './components/Stopwatch';
 import SelectButton from './components/SelectButton';
 import clockIcon from './assets/clock.svg';
 import stopwatchIcon from './assets/stopwatch.svg';
@@ -33,6 +34,7 @@ function App() {
     <div className='App'>
       <div className='tool'>
         {mode === MODES.CLOCK.value && <Clock />}
+        {mode === MODES.STOPWATCH.value && <Stopwatch />}
       </div>
       <div className='tool-selection'>
         <ToolSelection onToolSelect={setMode} selectedTool={mode} />

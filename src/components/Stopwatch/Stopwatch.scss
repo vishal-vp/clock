@@ -1,0 +1,84 @@
+@import '../../sass/variables.scss';
+
+$time-unit-padding: 0.3;
+$lap-timings-size: 1.4;
+
+.stopwatch {
+  /* Display & Box Model */
+  margin: auto;
+  margin-top: 25vh;
+
+  .time-unit {
+    /* Display & Box Model */
+    display: inline-block;
+    padding: 0 $time-unit-padding * 1rem;
+
+    .digit {
+      /* Text */
+      font-size: 4rem;
+      @media screen and (max-width: $sm) {
+        font-size: 2.5rem;
+      }
+      @media screen and (max-width: $xs) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .digit:nth-child(even) {
+      /* Display & Box Model */
+      padding-left: 0 !important;
+    }
+  }
+
+  .stopwatch-controls {
+    /* Display & Box Model */
+    padding: 2.0rem 0;
+    /* Text */
+    text-align: center;
+
+    .stopwatch-control {
+      /* Display & Box Model */
+      background: $black;
+      border-radius: 100%;
+      margin: 0 0.3rem;
+      padding: 0.8rem;
+      /* Other */
+      cursor: pointer;
+      outline: none;
+      &::-moz-focus-inner {
+        /* Display & Box Model */
+        border: 0;
+      }
+
+      img {
+        /* Display & Box Model */
+        height: 1.6rem;
+        margin: auto;
+        vertical-align: middle;
+        width: 1.6rem;
+      }
+    }
+  }
+
+  .lap-timings {
+    /* Display & Box Model */
+    max-height: $lap-timings-size*5rem;
+    overflow-y: auto;
+    /* Other */
+    scrollbar-width: none;
+
+    table {
+      /* Display & Box Model */
+      margin: auto;
+
+      td {
+        /* Display & Box Model */
+        padding: 0.6rem;
+        /* Text */
+        font-family: helvetica;
+        font-size: $lap-timings-size*1rem;
+        text-align: right;
+      }
+    }
+  }
+}

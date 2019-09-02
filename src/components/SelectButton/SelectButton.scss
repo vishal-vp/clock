@@ -16,11 +16,13 @@
 
     /* Color */
     background: $black;
-    color: $white;
-
     &.selected {
       /* Color */
       background: $mine-shaft;
     }
+    color: $white;
+
+    /* Other */
+    cursor: pointer;
   }
 }

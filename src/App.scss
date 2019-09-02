@@ -24,6 +24,7 @@ button {
 html, body, #root, .App, .tool {
   /* Display & Box Model */
   height: 100%;
+  overflow: hidden;
 }
 
 .App {
@@ -46,8 +47,8 @@ html, body, #root, .App, .tool {
       margin: auto;
       width: 7rem;
       @media screen and (max-width: $sm) {
-        height: 2.6rem;
-        width: 4.6rem;
+        height: 3.0rem;
+        width: 6.0rem;
       }
       @media screen and (max-width: $xs) {
         height: 2.3rem;
@@ -58,7 +59,7 @@ html, body, #root, .App, .tool {
         /* Display & Box Model */
         padding: 0.8rem;
         @media screen and (max-width: $sm) {
-          padding: 0.4rem;
+          padding: 0.6rem;
         }
       }
     }

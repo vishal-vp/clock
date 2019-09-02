@@ -13,8 +13,6 @@ $time-unit-padding: 0.3;
     padding: 0 $time-unit-padding * 1rem;
 
     .digit {
-      /* Display & Box Model */
-      width: 1ch;
       /* Text */
       font-size: 4rem;
       @media screen and (max-width: $sm) {
