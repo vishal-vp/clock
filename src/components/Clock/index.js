@@ -59,7 +59,7 @@ function Clock(props) {
   }, [clockSettings.settings.format]);
 
   return (
-    <div className='clock'>
+    <div className={`clock ${props.isHidden ? 'hidden': ''}`}>
       <ClockSettings {...clockSettings} />
       <div className='time'>
         <TimeUnit disabled={true} value={time.hours} />

@@ -33,8 +33,8 @@ function App() {
   return (
     <div className='App'>
       <div className='tool'>
-        {mode === MODES.CLOCK.value && <Clock />}
-        {mode === MODES.STOPWATCH.value && <Stopwatch />}
+        <Clock isHidden={mode !== MODES.CLOCK.value} />
+        <Stopwatch isHidden={mode !== MODES.STOPWATCH.value} />
       </div>
       <div className='tool-selection'>
         <ToolSelection onToolSelect={setMode} selectedTool={mode} />

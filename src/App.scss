@@ -27,6 +27,10 @@ html, body, #root, .App, .tool {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .App {
   .tool {
     /* Display & Box Model */
