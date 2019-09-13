@@ -41,11 +41,9 @@ function useElapsedTime(resolution=10) {
   useEffect(() => {
     if (timerId.current && (status === STOPWATCH_STATUS.NOT_STARTED
         || status === STOPWATCH_STATUS.PAUSED)) {
-      console.log('clearing interval...');
       clearInterval(timerId.current);
       timerId.current = undefined;
     } else if (status === STOPWATCH_STATUS.RUNNING) {
-      console.log('setting interval...');
       timerId.current = setInterval(() => {
         setElapsedTime(elapsedTime => offset + (new Date() - startTime));
       }, resolution);
