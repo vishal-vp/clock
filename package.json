@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.1.0",
-    "@testing-library/react": "^9.1.4"
+    "@testing-library/react": "^9.1.4",
+    "lolex": "^4.2.0"
   }
 }
