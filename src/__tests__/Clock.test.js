@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import { act } from 'react-dom/test-utils';
 import Clock from '../components/Clock';
 import moment from 'moment';
 import lolex from 'lolex';
@@ -72,4 +73,18 @@ test('Clock hides meridiem on click of 24 hr format setting', () => {
   fireEvent.click(queryByText('24'));
   expect(queryByText('AM')).not.toBeInTheDocument();
   expect(queryByText('PM')).not.toBeInTheDocument();
+});
+
+test('Clock displays time according to the clock', () => {
+  const { container } = render(<Clock />);
+  let expectedTime = moment(new Date()).format('hh:mm:ss');
+  let time = parseTimeFromTimeUnits(container.querySelectorAll('.time-unit'));
+  expect(time).toEqual(expectedTime);
+  const tickIntervals = [...Array(40)].map(e=>~~(Math.random()*40*1000));
+  for (const interval of tickIntervals) {
+    act(() => { clock.tick(interval); clock.next(); });
+    expectedTime = moment(new Date()).format('hh:mm:ss');
+    time = parseTimeFromTimeUnits(container.querySelectorAll('.time-unit'));
+    expect(time).toEqual(expectedTime);
+  }
 });
