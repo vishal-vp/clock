@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Clock from './components/Clock';
 import Stopwatch from './components/Stopwatch';
 import SelectButton from './components/SelectButton';
 import clockIcon from './assets/clock.svg';
 import stopwatchIcon from './assets/stopwatch.svg';
 import './App.scss';
+import useLocalStorage from './hooks';
 
 const MODES = Object.freeze({
   CLOCK: { value: 'clock', icon: clockIcon },
@@ -28,7 +29,7 @@ function ToolSelection(props) {
 }
 
 function App() {
-  const [mode, setMode] = useState(MODES.CLOCK.value);
+  const [mode, setMode] = useLocalStorage('app:mode', MODES.CLOCK.value);
 
   return (
     <div className='App'>
