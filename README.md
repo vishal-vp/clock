@@ -1,2 +1,2 @@
 # Clock
-A clock application build using react.
+A clock PWA build with react.

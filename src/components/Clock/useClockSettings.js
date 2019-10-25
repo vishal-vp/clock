@@ -1,7 +1,7 @@
-import { useState } from "react";
+import useLocalStorage from '../../hooks';
 
 function useClockSettings(initialSettings) {
-  const [settings, setSettings] = useState(initialSettings);
+  const [settings, setSettings] = useLocalStorage('clock:settings', initialSettings);
 
   function handleTimeFormatChange(format) {
     setSettings({...settings, format});

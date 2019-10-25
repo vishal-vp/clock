@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from 'react';
+import useLocalStorage from '../../hooks';
 
 const STOPWATCH_STATUS = Object.freeze({
   NOT_STARTED: 'NOT_STARTED',
@@ -30,11 +31,14 @@ function getElapsedTimeObject(elapsedTime) {
 }
 
 function useElapsedTime(resolution=10) {
-  const [status, setStatus] = useState(STOPWATCH_STATUS.NOT_STARTED);
-  const [startTime, setStartTime] = useState(undefined);
-  const [elapsedTime, setElapsedTime] = useState(0);
-  const [offset, setOffset] = useState(0);
-  const [lapTimings, setLapTimings] = useState([]);
+  const [status, setStatus] = useLocalStorage('stopwatch:status', STOPWATCH_STATUS.NOT_STARTED);
+  const startTimeStr = window.localStorage.getItem('stopwatch:startTime');
+  // Manually load from localstorage as a date object.
+  const startTimeInitialVal = startTimeStr ? new Date(JSON.parse(startTimeStr)) : new Date();
+  const [startTime, setStartTime] = useLocalStorage('stopwatch:startTime', startTimeInitialVal, true);
+  const [elapsedTime, setElapsedTime] = useLocalStorage('stopwatch:elapsedTime', 0);
+  const [offset, setOffset] = useLocalStorage('stopwatch:offset', 0);
+  const [lapTimings, setLapTimings] = useLocalStorage('stopwatch:lapTimings', []);
 
   let timerId = useRef(undefined);
 
