@@ -32,9 +32,13 @@ function getElapsedTimeObject(elapsedTime) {
 
 function useElapsedTime(resolution=10) {
   const [status, setStatus] = useLocalStorage('stopwatch:status', STOPWATCH_STATUS.NOT_STARTED);
-  const startTimeStr = window.localStorage.getItem('stopwatch:startTime');
   // Manually load from localstorage as a date object.
-  const startTimeInitialVal = startTimeStr ? new Date(JSON.parse(startTimeStr)) : new Date();
+  let startTimeInitialVal;
+  try {
+    startTimeInitialVal = new Date(JSON.parse(window.localStorage.getItem('stopwatch:startTime')));
+  } catch (err) {
+    startTimeInitialVal = new Date();
+  }
   const [startTime, setStartTime] = useLocalStorage('stopwatch:startTime', startTimeInitialVal, true);
   const [elapsedTime, setElapsedTime] = useLocalStorage('stopwatch:elapsedTime', 0);
   const [offset, setOffset] = useLocalStorage('stopwatch:offset', 0);

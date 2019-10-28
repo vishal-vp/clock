@@ -15,6 +15,7 @@ beforeEach(() => {
 
 afterEach(() => {
   clock.uninstall();
+  window.localStorage.clear();
 });
 
 function parseTimeFromTimeUnits(timeUnits) {
