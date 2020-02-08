@@ -1,21 +1,28 @@
 {
   "files": {
-    "main.css": "/clock/static/css/main.0a138038.chunk.css",
-    "main.js": "/clock/static/js/main.f3141d6e.chunk.js",
-    "main.js.map": "/clock/static/js/main.f3141d6e.chunk.js.map",
-    "runtime~main.js": "/clock/static/js/runtime~main.e4563aac.js",
-    "runtime~main.js.map": "/clock/static/js/runtime~main.e4563aac.js.map",
-    "static/js/2.ce20bfdc.chunk.js": "/clock/static/js/2.ce20bfdc.chunk.js",
-    "static/js/2.ce20bfdc.chunk.js.map": "/clock/static/js/2.ce20bfdc.chunk.js.map",
+    "main.css": "/clock/static/css/main.7ff4d6f6.chunk.css",
+    "main.js": "/clock/static/js/main.2adb66e4.chunk.js",
+    "main.js.map": "/clock/static/js/main.2adb66e4.chunk.js.map",
+    "runtime-main.js": "/clock/static/js/runtime-main.26a4cf15.js",
+    "runtime-main.js.map": "/clock/static/js/runtime-main.26a4cf15.js.map",
+    "static/js/2.cc0538aa.chunk.js": "/clock/static/js/2.cc0538aa.chunk.js",
+    "static/js/2.cc0538aa.chunk.js.map": "/clock/static/js/2.cc0538aa.chunk.js.map",
     "index.html": "/clock/index.html",
-    "precache-manifest.116215ed56d7e5c59ef39ff027356f7e.js": "/clock/precache-manifest.116215ed56d7e5c59ef39ff027356f7e.js",
+    "precache-manifest.8f1964d7614d7604caacfe8bd41ffd89.js": "/clock/precache-manifest.8f1964d7614d7604caacfe8bd41ffd89.js",
     "service-worker.js": "/clock/service-worker.js",
-    "static/css/main.0a138038.chunk.css.map": "/clock/static/css/main.0a138038.chunk.css.map",
+    "static/css/main.7ff4d6f6.chunk.css.map": "/clock/static/css/main.7ff4d6f6.chunk.css.map",
+    "static/js/2.cc0538aa.chunk.js.LICENSE.txt": "/clock/static/js/2.cc0538aa.chunk.js.LICENSE.txt",
     "static/media/clock.svg": "/clock/static/media/clock.bf9cf15c.svg",
     "static/media/lap.svg": "/clock/static/media/lap.d0bf0211.svg",
     "static/media/pause.svg": "/clock/static/media/pause.2d83b866.svg",
     "static/media/start.svg": "/clock/static/media/start.09f09527.svg",
     "static/media/stop.svg": "/clock/static/media/stop.1916a92e.svg",
     "static/media/stopwatch.svg": "/clock/static/media/stopwatch.7f223f10.svg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.26a4cf15.js",
+    "static/js/2.cc0538aa.chunk.js",
+    "static/css/main.7ff4d6f6.chunk.css",
+    "static/js/main.2adb66e4.chunk.js"
+  ]
 }
